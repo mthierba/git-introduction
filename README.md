@@ -60,6 +60,63 @@ git commit -m "My commit message"
 - Only one branch can be active ("checked out") at any time
 - Different branches (with different versions of the repo contents) can exist side-by-side
 
+## 4. GIT 200 - TEAM / Git Workflows
+
+- Branching model: Release branch
+  - `main` always contains latest Production version
+  - As new release sprint starts, `Release/x.x` branch is created off `main`
+  - Issues & features assigned to devs
+  - New feature branch created off `Release/x.x` for each issue being worked on
+  - Merge Request (back into `Release/x.x`) raised by developer and reviewed by development lead
+  - Throughout sprint, more and more features are being integrated into Release branch
+  - At end of sprint, after successful testing, Release branch is merged into `main` (= Production deployment)
+- Model/Report dependencies to be coordinated between devs
+- Ref: <https://docs.microsoft.com/azure/devops/repos/git/git-branching-guidance#use-release-branches>
+- Demo
+  - Main repository: <https://github.com/pbi-tools/advworks-git-demo>
+  - Sprint/Release project: <https://github.com/pbi-tools/advworks-git-demo/projects/1>
+  - Assuming three personas
+    - Lead: Manages release and approves merge requests; creates Release branch
+    - Dev1: Model changes; creates feature branch in main repo
+    - Dev2: Report changes; creates features branch in fork
+
+## 5. Next Steps / Advanced GIT
+
+- Other git concepts/features
+  - LFS
+  - Rebase
+  - Stash
+  - Submodules
+  - Cherry pick
+- CI/CD - Deployment Automation
+  - See existing `pbi-tools` talks on CI/CD below...
+
+## 6. References
+
+- GIT - General
+  - [git Official Homepage](https://git-scm.com/)
+  - [git Reference](https://git-scm.com/docs)
+  - [GitHub git Cheat Sheet](https://training.github.com/downloads/github-git-cheat-sheet/)
+- Books, Tutorials
+  - [Pro Git Book (Online)](https://git-scm.com/book)
+  - [Atlassian Git Tutorials](https://www.atlassian.com/git/tutorials)
+- git Clients
+  - [Visual Studio Code](https://code.visualstudio.com/docs/editor/versioncontrol)
+  - [SourceTree](https://www.sourcetreeapp.com/)
+  - [GitHub Desktop](https://desktop.github.com/)
+  - [GitKraken](https://www.gitkraken.com/git-client)
+  - [TortoiseGit](https://tortoisegit.org/)
+- Branching Strategies
+  - [A successful Git branching model](https://nvie.com/posts/a-successful-git-branching-model/)
+  - [TE3 Onboarding Guide](https://docs.tabulareditor.com/onboarding/parallel-development.html#branching-strategy)
+  - [Trunk-based development](https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development)
+  - [Azure DevOps - Git branching strategy](https://docs.microsoft.com/azure/devops/repos/git/git-branching-guidance)
+  - [GitHub Flow](https://docs.github.com/en/get-started/quickstart/github-flow)
+- pbi-tools
+  - <https://pbi.tools/>
+  - [pbi-tools Videos/Presentations](https://tinyurl.com/pbi-tools)
+  - [Sponsor work on pbi-tools!](https://github.com/sponsors/pbi-tools)
+
 ## Key Concepts
 
 | Term/Concept | Description | Reference |
