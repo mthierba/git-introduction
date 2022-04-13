@@ -54,4 +54,10 @@ git commit -m "My commit message"
   - Add "remote" to the local repo
   - Push to the remote
 
+## 3. GIT 103 - Branches
+
+- Branches represent working versions of the entire repository
+- Only one branch can be active ("checked out") at any time
+- Different branches (with different versions of the repo contents) can exist side-by-side
+
 © Mathias Thierbach 2022
