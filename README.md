@@ -47,4 +47,11 @@ git commit -m "My commit message"
 
 - **Visual Studio Code**, SourceTree, GitHub Desktop, **GitKraken**, TortoiseGit (*links under `References`*)
 
+## 2. GIT 102 - Remotes / GitHub.com
+
+- Publishing a local repository
+  - Create new, empty, server-side repository (example: github.com)
+  - Add "remote" to the local repo
+  - Push to the remote
+
 © Mathias Thierbach 2022
